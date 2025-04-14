@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bindItem"
+            type="com.selva.myapplication.domain.model.MealItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        app:cardCornerRadius="13dp"
+        android:minHeight="72dp"
+        android:paddingHorizontal="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/meal_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/round_image"
+                android:contentDescription="@{bindItem.mealName}" />
+
+            <TextView
+                android:id="@+id/meal_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/meal_image"
+                android:layout_alignBottom="@id/meal_image"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/meal_image"
+                android:gravity="center_vertical"
+                android:text="@{bindItem.mealName}" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
