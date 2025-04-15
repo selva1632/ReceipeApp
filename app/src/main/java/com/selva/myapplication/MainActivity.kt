@@ -5,15 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.selva.myapplication.presentation.adapter.FoodCategoryAdapter
 import com.selva.myapplication.domain.model.FoodCategoryItem
-import com.selva.myapplication.presentation.listener.onItemClickListener
-import com.selva.myapplication.data.MealRepositoryImpl
+import com.selva.myapplication.presentation.listener.OnItemClickListener
 import com.selva.myapplication.databinding.ActivityMainBinding
 import com.selva.myapplication.presentation.viewmodel.FoodCategoryViewModel
-import com.selva.myapplication.presentation.viewmodel.factory.FoodCategoryViewModelFactory
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: FoodCategoryViewModel by viewModels()
 
     private val eventListener by lazy {
-        object : onItemClickListener {
+        object : OnItemClickListener {
             override fun onClick(item: Any) {
                 when (item) {
                     is FoodCategoryItem -> startMealListActivity(item)

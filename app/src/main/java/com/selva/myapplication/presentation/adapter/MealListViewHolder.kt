@@ -4,13 +4,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.selva.myapplication.databinding.MealListViewHolderBinding
 import com.selva.myapplication.domain.model.MealItem
-import com.selva.myapplication.presentation.listener.onItemClickListener
+import com.selva.myapplication.presentation.listener.OnItemClickListener
 
 class MealListViewHolder(
     val binding: MealListViewHolderBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(item: MealItem, eventListener: onItemClickListener) {
+    fun bind(item: MealItem, eventListener: OnItemClickListener) {
         with(binding) {
             bindItem = item
             root.setOnClickListener {

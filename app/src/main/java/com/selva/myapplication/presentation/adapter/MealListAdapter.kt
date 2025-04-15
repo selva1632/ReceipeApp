@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.selva.myapplication.databinding.MealListViewHolderBinding
 import com.selva.myapplication.domain.model.MealItem
-import com.selva.myapplication.presentation.listener.onItemClickListener
+import com.selva.myapplication.presentation.listener.OnItemClickListener
 
 class MealListAdapter(
-    private val eventListener: onItemClickListener
+    private val eventListener: OnItemClickListener
 ) : RecyclerView.Adapter<MealListViewHolder>() {
 
     private val itemList = mutableListOf<MealItem>()

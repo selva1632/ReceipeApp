@@ -1,5 +1,5 @@
 package com.selva.myapplication.presentation.listener
 
-interface onItemClickListener {
+interface OnItemClickListener {
     fun onClick(item: Any)
 }

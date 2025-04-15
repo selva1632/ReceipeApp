@@ -11,7 +11,7 @@ import com.selva.myapplication.data.MealRepositoryImpl
 import com.selva.myapplication.databinding.ActivityMealListBinding
 import com.selva.myapplication.domain.model.MealItem
 import com.selva.myapplication.presentation.adapter.MealListAdapter
-import com.selva.myapplication.presentation.listener.onItemClickListener
+import com.selva.myapplication.presentation.listener.OnItemClickListener
 import com.selva.myapplication.presentation.viewmodel.MealListViewModel
 import com.selva.myapplication.presentation.viewmodel.factory.MealListViewModelFactory
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,7 +29,7 @@ class MealListActivity : AppCompatActivity() {
     }
 
     private val eventListener by lazy {
-        object : onItemClickListener {
+        object : OnItemClickListener {
             override fun onClick(item: Any) {
                 when (item) {
                     is MealItem -> {
