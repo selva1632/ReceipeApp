@@ -53,6 +53,8 @@ class MealListActivity : AppCompatActivity() {
         val categoryName = intent.getStringExtra(MainActivity.CATEGORY_NAME) ?: ""
 
         with(binding) {
+            lifecycleOwner = this@MealListActivity
+            vm = viewmodel
             mealsRecyclerView.adapter = adapter
         }
 
@@ -61,10 +63,6 @@ class MealListActivity : AppCompatActivity() {
     }
 
     private fun initObserver() {
-        viewmodel.mealList.observe(this) {
-            adapter.replaceItems(it)
-        }
-
         viewmodel.toastLiveData.observe(this) {
             if (it.isNotEmpty()) {
                 Toast.makeText(this, it, Toast.LENGTH_SHORT).show()

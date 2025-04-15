@@ -19,7 +19,7 @@ class FoodCategoryViewModel @Inject constructor(
     private val repository: MealRepository
 ) : ViewModel() {
 
-    private val _foodCategory = MutableLiveData<List<FoodCategoryItem>>()
+    private val _foodCategory = MutableLiveData<List<FoodCategoryItem>>(emptyList())
     val foodCategory: LiveData<List<FoodCategoryItem>>
         get() = _foodCategory
 

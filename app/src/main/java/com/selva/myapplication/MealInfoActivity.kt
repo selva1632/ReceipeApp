@@ -45,6 +45,9 @@ class MealInfoActivity : AppCompatActivity() {
         })
 
         with(binding) {
+            lifecycleOwner = this@MealInfoActivity
+            bindItem = viewmodel.mealInfo.value
+
             moreInfo.setOnClickListener {
                 viewmodel.mealInfo.value?.let {
                     Intent(Intent.ACTION_VIEW, Uri.parse(it.moreInfo)).also { intent ->

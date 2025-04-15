@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.selva.myapplication.presentation.adapter.FoodCategoryAdapter
 import com.selva.myapplication.domain.model.FoodCategoryItem
@@ -20,11 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val viewModel by viewModels<FoodCategoryViewModel> {
-        FoodCategoryViewModelFactory(
-            MealRepositoryImpl(RetrofitInstance.apiService)
-        )
-    }
+    private val viewModel: FoodCategoryViewModel by viewModels()
 
     private val eventListener by lazy {
         object : onItemClickListener {
@@ -46,18 +43,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         with(binding) {
+            lifecycleOwner = this@MainActivity
+            vm = viewModel
             foodCategoryRecyclerView.adapter = adapter
             foodCategoryRecyclerView.layoutManager = GridLayoutManager(this@MainActivity, 2)
         }
 
         viewModel.fetchMeals()
-        initObservers()
-    }
-
-    private fun initObservers() {
-        viewModel.foodCategory.observe(this) {
-            adapter.replaceItem(it)
-        }
     }
 
     fun startMealListActivity(item: FoodCategoryItem) {

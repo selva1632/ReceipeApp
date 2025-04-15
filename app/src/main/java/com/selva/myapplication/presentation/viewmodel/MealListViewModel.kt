@@ -24,7 +24,7 @@ class MealListViewModel @Inject constructor(
     val toastLiveData: LiveData<String>
         get() = _toastLiveData
 
-    private val _mealList = MutableLiveData<List<MealItem>>()
+    private val _mealList = MutableLiveData<List<MealItem>>(emptyList())
     val mealList: LiveData<List<MealItem>>
         get() = _mealList
 
