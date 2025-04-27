@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-
     <data>
-
         <variable
             name="bindItem"
             type="com.selva.myapplication.domain.model.MealItem" />
@@ -16,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="10dp"
-        tools:context=".MealInfoActivity">
+        tools:context=".ui.info.MealInfoActivity">
 
         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
             android:id="@+id/video_player"

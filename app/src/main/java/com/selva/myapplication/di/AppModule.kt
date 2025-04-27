@@ -1,6 +1,5 @@
 package com.selva.myapplication.di
 
-import com.selva.myapplication.RetrofitInstance
 import com.selva.myapplication.data.remote.api.ApiService
 import dagger.Module
 import dagger.Provides

@@ -1,4 +1,4 @@
-package com.selva.myapplication.utils
+package com.selva.myapplication.data.remote.mapper
 
 import com.selva.myapplication.data.remote.model.FoodCategoryDto
 import com.selva.myapplication.data.remote.model.MealDto

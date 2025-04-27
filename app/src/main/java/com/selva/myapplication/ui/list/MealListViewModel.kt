@@ -1,15 +1,14 @@
-package com.selva.myapplication.presentation.viewmodel
+package com.selva.myapplication.ui.list
 
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.selva.myapplication.domain.model.MealItem
 import com.selva.myapplication.domain.repository.MealRepository
-import com.selva.myapplication.utils.Result
-import com.selva.myapplication.utils.toMealItem
+import com.selva.myapplication.utils.network.Result
+import com.selva.myapplication.data.remote.mapper.toMealItem
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

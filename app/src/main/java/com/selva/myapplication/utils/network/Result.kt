@@ -1,4 +1,4 @@
-package com.selva.myapplication.utils
+package com.selva.myapplication.utils.network
 
 sealed class Result<T> {
     data class Success<T>(val data: T?): Result<T>()

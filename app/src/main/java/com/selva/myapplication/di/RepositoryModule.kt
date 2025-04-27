@@ -1,6 +1,6 @@
 package com.selva.myapplication.di
 
-import com.selva.myapplication.data.MealRepositoryImpl
+import com.selva.myapplication.data.remote.repository.MealRepositoryImpl
 import com.selva.myapplication.domain.repository.MealRepository
 import dagger.Binds
 import dagger.Module

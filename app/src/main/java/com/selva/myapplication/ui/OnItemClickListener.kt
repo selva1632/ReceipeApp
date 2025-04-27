@@ -1,4 +1,4 @@
-package com.selva.myapplication.presentation.listener
+package com.selva.myapplication.ui
 
 interface OnItemClickListener {
     fun onClick(item: Any)

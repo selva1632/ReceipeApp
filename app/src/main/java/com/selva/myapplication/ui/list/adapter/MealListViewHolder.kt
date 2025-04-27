@@ -1,10 +1,10 @@
-package com.selva.myapplication.presentation.adapter
+package com.selva.myapplication.ui.list.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.selva.myapplication.databinding.MealListViewHolderBinding
 import com.selva.myapplication.domain.model.MealItem
-import com.selva.myapplication.presentation.listener.OnItemClickListener
+import com.selva.myapplication.ui.OnItemClickListener
 
 class MealListViewHolder(
     val binding: MealListViewHolderBinding

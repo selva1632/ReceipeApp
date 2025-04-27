@@ -1,4 +1,4 @@
-package com.selva.myapplication
+package com.selva.myapplication.ui.info
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -9,8 +9,8 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+import com.selva.myapplication.ui.list.MealListActivity
 import com.selva.myapplication.databinding.ActivityMealInfoBinding
-import com.selva.myapplication.presentation.viewmodel.MealInfoViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

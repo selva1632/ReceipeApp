@@ -1,4 +1,4 @@
-package com.selva.myapplication
+package com.selva.myapplication.ui.list
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,13 +7,12 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.selva.myapplication.data.MealRepositoryImpl
 import com.selva.myapplication.databinding.ActivityMealListBinding
 import com.selva.myapplication.domain.model.MealItem
-import com.selva.myapplication.presentation.adapter.MealListAdapter
-import com.selva.myapplication.presentation.listener.OnItemClickListener
-import com.selva.myapplication.presentation.viewmodel.MealListViewModel
-import com.selva.myapplication.presentation.viewmodel.factory.MealListViewModelFactory
+import com.selva.myapplication.ui.OnItemClickListener
+import com.selva.myapplication.ui.info.MealInfoActivity
+import com.selva.myapplication.ui.list.adapter.MealListAdapter
+import com.selva.myapplication.ui.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -22,11 +21,7 @@ import kotlinx.coroutines.launch
 class MealListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMealListBinding
 
-    private val viewmodel by viewModels<MealListViewModel> {
-        MealListViewModelFactory(
-            MealRepositoryImpl(RetrofitInstance.apiService)
-        )
-    }
+    private val viewmodel by viewModels<MealListViewModel>()
 
     private val eventListener by lazy {
         object : OnItemClickListener {

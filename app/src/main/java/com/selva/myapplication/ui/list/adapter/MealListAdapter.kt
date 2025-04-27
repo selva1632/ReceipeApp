@@ -1,11 +1,11 @@
-package com.selva.myapplication.presentation.adapter
+package com.selva.myapplication.ui.list.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.selva.myapplication.databinding.MealListViewHolderBinding
 import com.selva.myapplication.domain.model.MealItem
-import com.selva.myapplication.presentation.listener.OnItemClickListener
+import com.selva.myapplication.ui.OnItemClickListener
 
 class MealListAdapter(
     private val eventListener: OnItemClickListener
