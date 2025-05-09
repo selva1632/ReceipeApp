@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.selva.myapplication.databinding.ActivityMealListBinding
 import com.selva.myapplication.domain.model.MealItem
-import com.selva.myapplication.ui.OnItemClickListener
+import com.selva.myapplication.ui.common.OnItemClickListener
 import com.selva.myapplication.ui.info.MealInfoActivity
 import com.selva.myapplication.ui.list.adapter.MealListAdapter
 import com.selva.myapplication.ui.main.MainActivity

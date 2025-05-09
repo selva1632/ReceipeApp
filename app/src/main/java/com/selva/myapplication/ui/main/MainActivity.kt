@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.selva.myapplication.ui.list.MealListActivity
 import com.selva.myapplication.ui.main.adapter.FoodCategoryAdapter
 import com.selva.myapplication.domain.model.FoodCategoryItem
-import com.selva.myapplication.ui.OnItemClickListener
+import com.selva.myapplication.ui.common.OnItemClickListener
 import com.selva.myapplication.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 

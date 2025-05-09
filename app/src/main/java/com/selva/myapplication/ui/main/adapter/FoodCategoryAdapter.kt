@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.selva.myapplication.databinding.MealCategoryViewholderBinding
 import com.selva.myapplication.domain.model.FoodCategoryItem
-import com.selva.myapplication.ui.OnItemClickListener
+import com.selva.myapplication.ui.common.OnItemClickListener
 
 class FoodCategoryAdapter(
     private val eventListener: OnItemClickListener

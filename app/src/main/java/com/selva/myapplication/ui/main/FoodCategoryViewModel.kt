@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.selva.myapplication.domain.model.FoodCategoryItem
-import com.selva.myapplication.utils.network.Result
+import com.selva.myapplication.baseutil.network.Result
 import com.selva.myapplication.domain.repository.MealRepository
 import com.selva.myapplication.data.remote.mapper.toFoodCategoryItem
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -1,4 +1,4 @@
-package com.selva.myapplication.ui
+package com.selva.myapplication.ui.common
 
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView

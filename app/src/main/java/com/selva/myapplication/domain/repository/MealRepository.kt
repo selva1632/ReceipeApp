@@ -1,6 +1,6 @@
 package com.selva.myapplication.domain.repository
 
-import com.selva.myapplication.utils.network.Result
+import com.selva.myapplication.baseutil.network.Result
 import com.selva.myapplication.data.remote.model.FoodCategoryDto
 import com.selva.myapplication.data.remote.model.MealDto
 

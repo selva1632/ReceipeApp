@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.selva.myapplication.domain.model.MealItem
 import com.selva.myapplication.domain.repository.MealRepository
-import com.selva.myapplication.utils.network.Result
+import com.selva.myapplication.baseutil.network.Result
 import com.selva.myapplication.data.remote.mapper.toMealItem
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

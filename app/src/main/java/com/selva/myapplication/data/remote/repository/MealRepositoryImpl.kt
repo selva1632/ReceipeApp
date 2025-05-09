@@ -4,7 +4,7 @@ import com.selva.myapplication.data.remote.api.ApiService
 import com.selva.myapplication.data.remote.model.FoodCategoryDto
 import com.selva.myapplication.data.remote.model.MealDto
 import com.selva.myapplication.domain.repository.MealRepository
-import com.selva.myapplication.utils.network.Result
+import com.selva.myapplication.baseutil.network.Result
 import javax.inject.Inject
 
 class MealRepositoryImpl @Inject constructor(private val api: ApiService) : MealRepository {
